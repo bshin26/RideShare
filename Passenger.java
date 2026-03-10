@@ -1,11 +1,11 @@
-public class Passanger {
+public class Passenger {
     // Fields
     private int destination;
     private boolean direction; // Will return true if going right and false if going left
     private int start;
 
     // Constructors
-    public Passanger(int myDestination, int myStart){
+    public Passenger(int myDestination, int myStart){
         destination = myDestination;
         start = myStart;
 
