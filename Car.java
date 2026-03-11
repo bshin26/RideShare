@@ -4,7 +4,7 @@ public class Car {
     private int destination;
     private int currentLocation;
     private boolean direction;
-    private ArrayList<Passanger> passengers;
+    private ArrayList<Passenger> passengers;
     private int passengersArrived = 0;
 
     // Constructors
@@ -12,11 +12,11 @@ public class Car {
         destination = myDestination;
         currentLocation = myCurrentLocation;
         direction = destination > currentLocation; // Right = true
-        passengers = new ArrayList<Passanger>();
+        passengers = new ArrayList<Passenger>();
     }
 
     // Methods
-    public void addPassenger(Passanger p){
+    public void addPassenger(Passenger p){
         if(passengers.size() < 3 && p.getDirection() == direction){
             passengers.add(p); // Only adds the passenger if the car is not full and is traveling the same direction as the passanger
         }
@@ -38,9 +38,9 @@ public class Car {
      * Passengers get removed only if the passenger has reached their destination or the car has reached its final destination
      */
 
-    public Passanger unload(){
+    public Passenger unload(){
         for(int i = 0; i < passengers.size(); i++){
-            Passanger a = passengers.get(i);
+            Passenger a = passengers.get(i);
             if(a.getDestination() == currentLocation || destination == currentLocation){
                 passengers.remove(i);
                 if(a.getDestination() == currentLocation){
@@ -66,6 +66,14 @@ public class Car {
 
     public int getLocation(){
         return currentLocation;
+    }
+
+    public int getDestination(){
+        return destination;
+    }
+
+    public boolean getDirection(){
+        return direction;
     }
 
     public int getPassengersArrived(){
