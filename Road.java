@@ -23,7 +23,7 @@ public class Road {
             while(end == start){
                 end = (int)(Math.random() * STATIONNUMB); // Ensures the passengers actually need a ride
             }
-            station.get(start).addPassenger(new Passenger(start, end)); // This will: Create the passenger and assign their starting and ending station, get the station number, and add that passenger to that station
+            station.get(start).addPassenger(new Passenger(end, start)); // This will: Create the passenger and assign their starting and ending station, get the station number, and add that passenger to that station
         }
     }
 
@@ -34,7 +34,7 @@ public class Road {
             while(end == start){
                 end = (int)(Math.random() * STATIONNUMB);
             }
-            car.add(new Car(start, end)); // Same logic as addPeople, but with cars
+            car.add(new Car(end, start)); // Same logic as addPeople, but with cars
         }
     }
 
