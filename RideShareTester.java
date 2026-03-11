@@ -7,8 +7,8 @@ public class RideShareTester {
         Road r = new Road();
         System.out.println("Generated 32 stations");
 
-        r.addCars(20);
-        System.out.println("Generated 20 cars");
+        r.addCars(40);
+        System.out.println("Generated 40 cars");
 
         r.addPeople(50);
         System.out.println("Generated 50 passengers");
@@ -47,7 +47,7 @@ public class RideShareTester {
         }
 
         double percentArrived = (double)(totalArrived)/(totalPassengers) * 100;
-        System.out.println("\n\nPercent of passengers who got to destination with a simulation of 20 cars: " + (int)percentArrived + "%\n\n");
+        System.out.println("\n\nPercent of passengers who got to destination with a simulation of 40 cars: " + (int)percentArrived + "%\n\n");
         System.out.println("Simulation done.\n");
     }
 }
